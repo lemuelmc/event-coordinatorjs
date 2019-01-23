@@ -1,0 +1,21 @@
+{
+  "name": "event-coordinator",
+  "version": "0.0.1",
+  "description": "Simple event library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "event",
+    "coordinator",
+    "event-coordinator",
+    "simple"
+  ],
+  "author": "Lemuel Raganas <lemuel.raganas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lemuelmc/event-coordinatorjs/issues"
+  },
+  "homepage": "https://github.com/lemuelmc/event-coordinatorjs#readme"
+}
