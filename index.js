@@ -9,7 +9,7 @@ var EventGuest = require('./module/event-guest');
 
 class EventCoordinator {
 
-    constructor(){
+    constructor() {
         this.info = {
             author: 'Lemuel Raganas <lemuel.raganas@gmail.com>',
             version: '0.0.1'
@@ -29,7 +29,7 @@ class EventCoordinator {
      */
     register(tableName, func, guestName) {
         guestName = guestName || Date.now();
-        if(tableName in this._tables) {
+        if (tableName in this._tables) {
             var table = this._tables[tableName]; // get the table name
             var guest = new EventGuest(guestName, func);
 
@@ -54,8 +54,8 @@ class EventCoordinator {
         return this._tables;
     }
 
-    serve(tableName, params){
-        if(tableName in this._tables) {
+    serve(tableName, params) {
+        if (tableName in this._tables) {
             var table = this._tables[tableName];
             table.forEach(guest => {
                 guest.serve(params);
@@ -67,18 +67,18 @@ class EventCoordinator {
     kick(guestName) {
         let that = this;
         this._tableNames.forEach(tableName => {
-            if(tableName in that._tables){
+            if (tableName in that._tables) {
                 var foundIndex = -1;
                 var table = that._tables[tableName];
-                for(var i=0 ; i<table.length; i++){
+                for (var i = 0; i < table.length; i++) {
                     var guest = table[i];
-                    if(guest.getGuestName() === guestName) {
+                    if (guest.getGuestName() === guestName) {
                         foundIndex = i;
                         break;
                     }
                 }
 
-                if(foundIndex > -1){
+                if (foundIndex > -1) {
                     table.splice(foundIndex, 1);
                 }
             }
@@ -86,7 +86,7 @@ class EventCoordinator {
     }
 
     clear(tableName) {
-        if(tableName in this._tableNames) {
+        if (tableName in this._tableNames) {
             var table = this._tables[tableName];
             table = [];
             this._tables[tableName] = table;

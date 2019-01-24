@@ -1,5 +1,5 @@
 {
-  "name": "event-coordinator",
+  "name": "simple-eventjs",
   "version": "0.0.1",
   "description": "Simple event library",
   "main": "index.js",
@@ -10,12 +10,13 @@
     "event",
     "coordinator",
     "event-coordinator",
-    "simple"
+    "simple",
+    "eventjs"
   ],
   "author": "Lemuel Raganas <lemuel.raganas@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lemuelmc/event-coordinatorjs/issues"
+    "url": "https://github.com/lemuelmc/simple-eventjs/issues"
   },
-  "homepage": "https://github.com/lemuelmc/event-coordinatorjs#readme"
+  "homepage": "https://github.com/lemuelmc/simple-eventjs#readme"
 }
